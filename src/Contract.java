@@ -2,10 +2,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.time.LocalDate;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-
 public class Contract {
     private int number;
     private LocalDate date;
