@@ -13,19 +13,19 @@ public class Main {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
 
-        System.out.println("Entre os dados do contrato:");
-        System.out.print("Numero:");
+        System.out.println("Enter the contract details:");
+        System.out.print("Number:");
         int numberContract = scanner.nextInt();
         scanner.nextLine();
-        System.out.print("Data (dd/MM/yyyy):  ");
+        System.out.print("Date (dd/MM/yyyy):  ");
         LocalDate date;
         try {date = LocalDate.parse(scanner.nextLine(), formatter);
-        } catch (DateTimeParseException e) {System.out.println("Data inválida. Use o formato DD/MM/YYYY.");
+        } catch (DateTimeParseException e) {System.out.println("Invalid Date. Use the format DD/MM/YYYY.");
             return;
         }
-        System.out.print("Valor do contrato:  ");
+        System.out.print("Contract Value:  ");
         double value = scanner.nextDouble();
-        System.out.print("Entre com o numero de parcelas:  ");
+        System.out.print("Enter the number of installments:  ");
         int number = scanner.nextInt();
         Contract contract = new Contract(number, date, value);
         ContractService service = new ContractService(new PayPal());
